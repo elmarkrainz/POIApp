@@ -8,6 +8,11 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
+/**
+ * DataAccess Layer to simply Insert, GetAll, Delete
+ *
+ * @author EKrainz
+ */
 public class PoiDataAccess {
 
 	private PoiDBHelper poiHelper;

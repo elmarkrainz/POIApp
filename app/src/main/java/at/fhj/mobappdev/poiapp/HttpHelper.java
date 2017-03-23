@@ -1,7 +1,7 @@
 package at.fhj.mobappdev.poiapp;
 
 /**
- * Created by krajn on 22/03/17.
+ * Created by EKrainz on 22/03/17.
  */
 
 import android.os.AsyncTask;

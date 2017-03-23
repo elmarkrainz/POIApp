@@ -23,6 +23,14 @@ import org.json.JSONObject;
 import at.fhj.mobappdev.poiapp.db.PoiDataAccess;
 import at.fhj.mobappdev.poiapp.db.PoiObject;
 
+/**
+ * starting GPS updates
+ *  - Locationmanager & Listener
+ *  - Calling an Asynctask for Geocoding
+ *  - saving POI to DB
+ *
+ * @author EKrainz
+ */
 public class NewPoiActivity extends AppCompatActivity {
 
     private static final int REQUEST_GPS = 101;

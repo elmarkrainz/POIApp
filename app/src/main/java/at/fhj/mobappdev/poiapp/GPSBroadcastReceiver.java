@@ -7,10 +7,16 @@ import android.location.LocationManager;
 import android.util.Log;
 import android.widget.Toast;
 
-
+/**
+ * Example for a Receiver
+ * Opens the new Poi Activity, when GPS is enabled -> see Intent filter in Manifest
+ *
+ * @author EKrainz
+ */
 public class GPSBroadcastReceiver extends BroadcastReceiver {
 
     private LocationManager locManager;
+
 
     @Override
     public void onReceive(Context context, Intent intent) {

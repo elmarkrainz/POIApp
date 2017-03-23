@@ -1,7 +1,9 @@
 package at.fhj.mobappdev.poiapp;
 
 /**
- * Created by krajn on 22/03/17.
+ *  Simple Interface to handle callback from Async Task
+ *
+ * @author EKrainz
  */
 
 interface ICallback {

@@ -1,7 +1,9 @@
 package at.fhj.mobappdev.poiapp.db;
 
 /**
- * Created by EK on 22/03/17.
+ * Simple base Object for a Point-Of-Interest
+ *
+ * @author EKrainz
  */
 
 public class PoiObject {

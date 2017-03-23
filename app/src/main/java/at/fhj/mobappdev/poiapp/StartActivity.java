@@ -7,6 +7,11 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
 
+/**
+ * Startactivity
+ *
+ * @author EKrainz
+ */
 public class StartActivity extends AppCompatActivity {
 
     @Override

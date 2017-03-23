@@ -5,6 +5,11 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteDatabase.CursorFactory;
 import android.database.sqlite.SQLiteOpenHelper;
 
+/**
+ * DB Helper for Sqlite Db generation
+ *
+ * @author EKrainz
+ */
 public class PoiDBHelper extends SQLiteOpenHelper {
 
     private static final String DATABASE_NAME = "POI.db";
