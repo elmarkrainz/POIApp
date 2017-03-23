@@ -22,13 +22,7 @@ public class PoiDataAccess {
 		poiHelper = new PoiDBHelper(c);
 	}
 
-	// public void open() throws SQLException {
-	// database = poiHelper.getWritableDatabase();
-	// }
-	//
-	// public void close() {
-	// poiHelper.close();
-	// }
+
 
 	public long addPOI(PoiObject poi) {
 		// 1. open DB

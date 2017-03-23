@@ -46,6 +46,7 @@ public class PoiDBHelper extends SQLiteOpenHelper {
         db.execSQL(DATABASE_CREATE);
     }
 
+
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         // upgrade DB
