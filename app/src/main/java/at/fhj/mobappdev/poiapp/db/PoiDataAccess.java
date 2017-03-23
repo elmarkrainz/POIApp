@@ -25,7 +25,7 @@ public class PoiDataAccess {
 	// poiHelper.close();
 	// }
 
-	public void addPOI(PoiObject poi) {
+	public long addPOI(PoiObject poi) {
 		// 1. open DB
 
 		database = poiHelper.getWritableDatabase();
@@ -38,7 +38,7 @@ public class PoiDataAccess {
 		values.put(PoiDBHelper.COLUMN_ADDRESS, poi.getAddress());
 
 		// 3. insert
-		database.insert(PoiDBHelper.TABLE_POIS, // table
+		long id =database.insert(PoiDBHelper.TABLE_POIS, // table
 				null, // nullColumnHack
 				values); // key/value -> keys = column names/ values = column
 							// values
@@ -46,6 +46,8 @@ public class PoiDataAccess {
 		// 4. close
 		database.close();
 
+
+		return id;
 	}
 
 	public void	deletePOI(PoiObject poi) {

@@ -29,4 +29,9 @@ public class StartActivity extends AppCompatActivity {
         startActivity(i);
     }
 
+
+    public void openLogger(View v) {
+        Intent i = new Intent(this, GpsLoggerActivity.class);
+        startActivity(i);
+    }
 }

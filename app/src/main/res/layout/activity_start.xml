@@ -16,17 +16,37 @@
 
         android:text="@string/buttonAdd"
 
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="76dp" />
+        android:layout_alignTop="@+id/imageView"
+        android:layout_toEndOf="@+id/imageView"
+        android:layout_marginStart="30dp" />
 
     <Button
         android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="16dp"
         android:text="my Pois"
-        android:layout_below="@+id/btnAddPoi"
         android:onClick="openAllPois"
-        android:layout_centerHorizontal="true" />
+        android:layout_below="@+id/btnAddPoi"
+        android:layout_alignStart="@+id/btnAddPoi" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="22dp"
+        android:onClick="openLogger"
+        android:text="LoggerService"
+        android:layout_below="@+id/button"
+        android:layout_alignStart="@+id/button" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="23dp"
+        app:srcCompat="@mipmap/ic_launcher"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="19dp" />
 </RelativeLayout>

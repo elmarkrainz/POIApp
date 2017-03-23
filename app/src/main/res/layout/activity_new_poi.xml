@@ -65,6 +65,7 @@
         android:layout_alignParentBottom="true"
         android:layout_alignStart="@+id/btnGeocode"
         android:layout_marginBottom="46dp"
+        android:onClick="savePoi"
         android:text="save" />
 
     <CheckBox

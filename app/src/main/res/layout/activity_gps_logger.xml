@@ -4,10 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="at.fhj.mobappdev.poiapp.AllPoisActivity">
+    tools:context="at.fhj.mobappdev.poiapp.GpsLoggerActivity">
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
 
@@ -15,22 +15,17 @@
         android:layout_alignParentTop="true"
         android:layout_marginStart="12dp"
         android:layout_marginTop="14dp"
-        android:text="All POIs"
+        android:text="Gps Logger"
         android:textSize="30sp" />
 
-    <RelativeLayout
-        android:layout_width="match_parent"
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/textView2"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="14dp">
-
-        <ListView
-            android:id="@+id/listPois"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentStart="true" />
-    </RelativeLayout>
-
+        android:layout_alignStart="@+id/textView3"
+        android:layout_below="@+id/textView3"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="19dp"
+        android:onClick="startLogging"
+        android:text="startLogging" />
 </RelativeLayout>

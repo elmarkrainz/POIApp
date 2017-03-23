@@ -63,4 +63,20 @@ public class PoiObject {
     public void setLongitude(double longitude) {
         this.longitude = longitude;
     }
+
+    @Override
+    public String toString() {
+        return "PoiObject{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", address='" + address + '\'' +
+                ", latitude=" + latitude +
+                ", longitude=" + longitude +
+                '}';
+    }
+
+    public String toShortString() {
+        return  address + ',' +"lat.=" + latitude + "/ long." + longitude;
+
+    }
 }

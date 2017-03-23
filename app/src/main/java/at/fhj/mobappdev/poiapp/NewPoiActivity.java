@@ -20,6 +20,9 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import at.fhj.mobappdev.poiapp.db.PoiDataAccess;
+import at.fhj.mobappdev.poiapp.db.PoiObject;
+
 public class NewPoiActivity extends AppCompatActivity {
 
     private static final int REQUEST_GPS = 101;
@@ -32,11 +35,12 @@ public class NewPoiActivity extends AppCompatActivity {
     private double latitude;
     private double longitude;
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_new_poi);
-
 
         edtAddress = (EditText) findViewById(R.id.edtAddress);
         edtCoords = (EditText) findViewById(R.id.edtCoords);
@@ -52,11 +56,19 @@ public class NewPoiActivity extends AppCompatActivity {
             }
         });
 
+
         locManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
         loclistener = new LocListener();
 
-
     }
+
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        stopGPS();
+    }
+
 
     private void stopGPS() {
         Log.i("GPS", "stop Gps ");
@@ -112,7 +124,21 @@ public class NewPoiActivity extends AppCompatActivity {
 
     public void savePoi(View v) {
 
-        // save my poi
+
+        PoiObject poi = new PoiObject();
+        poi.setName("Demo");  // add textfield for name
+
+        poi.setLongitude(longitude);
+        poi.setLatitude(latitude);
+        poi.setAddress(edtAddress.getText().toString());
+
+
+        PoiDataAccess poiDataAccess = new PoiDataAccess(this);
+
+        Long id = poiDataAccess.addPOI(poi);
+        Log.i("DB OP", "poi added to db, id:"+ id);
+
+
 
     }
 
@@ -173,5 +199,6 @@ public class NewPoiActivity extends AppCompatActivity {
 
 
         }
+
     }
 }
