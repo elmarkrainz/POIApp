@@ -11,32 +11,69 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
 
-        android:layout_marginStart="26dp"
-        android:layout_marginTop="25dp"
-        android:text="New POI"
-        android:textSize="30sp"
+        android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true" />
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="14dp"
+        android:text="New POI"
+        android:textSize="30sp" />
 
     <EditText
         android:id="@+id/edtAddress"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/textView"
-        android:layout_below="@+id/textView"
-        android:layout_marginTop="18dp"
+        android:layout_alignStart="@+id/edtCoords"
+        android:layout_below="@+id/edtCoords"
+        android:layout_marginTop="19dp"
         android:ems="10"
-        android:inputType="textPersonName"
-        android:hint="Address" />
+        android:hint="Address"
+        android:inputType="textMultiLine"
+        android:lines="3"
+        android:maxLines="3"
+        android:minLines="2"/>
 
     <EditText
         android:id="@+id/edtCoords"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/editText"
-        android:layout_below="@+id/editText"
-        android:layout_marginTop="27dp"
+        android:layout_alignStart="@+id/textView"
+        android:layout_below="@+id/textView"
+        android:layout_marginTop="26dp"
         android:ems="10"
-        android:inputType="textPersonName"
-        android:hint="Coords" />
+        android:hint="Coords"
+        android:inputType="textMultiLine"
+        android:lines="3"
+        android:maxLines="3"
+        android:minLines="2"
+
+        />
+
+    <Button
+        android:id="@+id/btnGeocode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="15dp"
+        android:onClick="geocode"
+        android:text="Geocode"
+        android:layout_alignBottom="@+id/edtAddress"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:id="@+id/btnSave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/btnGeocode"
+        android:layout_marginBottom="46dp"
+        android:text="save" />
+
+    <CheckBox
+        android:id="@+id/chkGps"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/btnGeocode"
+        android:layout_alignTop="@+id/edtCoords"
+        android:text="use GPS" />
+
+
 </RelativeLayout>

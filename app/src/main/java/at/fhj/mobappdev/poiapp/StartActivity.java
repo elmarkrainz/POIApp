@@ -16,21 +16,16 @@ public class StartActivity extends AppCompatActivity {
     }
 
 
-    public void openAddPoi(View v){
+    public void openAddPoi(View v) {
 
-
-        //Intent
-
+        //Intent to start another activity
         Intent i = new Intent(this, NewPoiActivity.class);
-
         startActivity(i);
-
 
     }
 
-    public void openAllPois(View v){
+    public void openAllPois(View v) {
         Intent i = new Intent(this, AllPoisActivity.class);
-
         startActivity(i);
     }
 
